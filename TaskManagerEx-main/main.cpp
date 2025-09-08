@@ -375,12 +375,16 @@ void COptions::SetDefaultValues()
 
     m_vmViewMode       = VM_DETAILS;
     m_cmHistMode       = CM_PANES;
-    m_usUpdateSpeed    = US_NORMAL;
+    m_usUpdateSpeed    = US_HIGH;
     m_fMinimizeOnUse   = TRUE;
     m_fConfirmations   = TRUE;
-    m_fAlwaysOnTop     = TRUE;
+    m_fAlwaysOnTop     = FALSE;
     m_fShow16Bit       = TRUE;
-    m_iCurrentPage     = -1;
+    m_fKernelTimes     = TRUE;
+    m_fNoTitle         = FALSE;
+    m_fHideWhenMin     = FALSE;
+    m_fShowDomainNames = TRUE;
+    m_iCurrentPage     = 2;
     m_rcWindow.top     = 10;
     m_rcWindow.left    = 10;
     m_rcWindow.bottom  = 10 + g_minHeight;
@@ -772,8 +776,10 @@ BOOL MainWnd_OnInitDialog(HWND hwnd)
     RECT rcMain;
     GetWindowRect(hwnd, &rcMain);
 
-    g_minWidth  = rcMain.right - rcMain.left;
-    g_minHeight = rcMain.bottom - rcMain.top;
+    //g_minWidth  = rcMain.right - rcMain.left;
+    //g_minHeight = rcMain.bottom - rcMain.top;
+    g_minWidth  = 800;
+    g_minHeight = 600;
 
     g_DefSpacing   = (DEFSPACING_BASE   * LOWORD(GetDialogBaseUnits())) / DLG_SCALE_X;
     g_InnerSpacing = (INNERSPACING_BASE * LOWORD(GetDialogBaseUnits())) / DLG_SCALE_X; 
@@ -2314,7 +2320,7 @@ void MainWnd_OnCommand(HWND hwnd, int id)
     case IDM_LOW:
     case IDM_PAUSED:
         {
-            static const int TimerDelays[] = { 500, 2000, 4000, 0, 0xFFFFFFFF };
+            static const int TimerDelays[] = { 500, 1000, 2000, 0, 0xFFFFFFFF };
 
             g_Options.m_usUpdateSpeed = (UPDATESPEED) (id - US_FIRST);
             ASSERT(g_Options.m_usUpdateSpeed <= ARRAYSIZE(TimerDelays));

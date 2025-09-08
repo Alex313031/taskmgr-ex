@@ -70,6 +70,7 @@ typedef short CSHORT;
 #include <secext.h>  // for GetUserNameEx
 #include <security.h>
 #include <powerbase.h>
+#pragma warning( disable : 4005 )
 #include <ntstatus.h>
 #include <dwmapi.h>
 //#include <ntdef.h>
@@ -228,7 +229,7 @@ Revision History:
 					    \
 	ShiftArrayWorker((LPBYTE) array, sizeof(array), sizeof(array[0]), index, direction)
 
-typedef enum SHIFT_DIRECTION { SHIFT_UP, SHIFT_DOWN };
+enum SHIFT_DIRECTION { SHIFT_UP, SHIFT_DOWN };
 
 static inline void ShiftArrayWorker(const LPBYTE          pArray, 
 				    const size_t          cbArraySize, 

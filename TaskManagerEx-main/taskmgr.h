@@ -162,11 +162,11 @@ typedef enum
 
 typedef enum
 {
-    US_HIGH,
-    US_NORMAL,
-    US_LOW,
-    US_PAUSED,
-    US_CUSTOM,
+    US_HIGH = 4,
+    US_NORMAL = 3,
+    US_LOW = 2,
+    US_PAUSED = 1,
+    US_CUSTOM = 0,
 } UPDATESPEED;
 #define US_FIRST IDM_HIGH
 #define US_LAST  IDM_CUSTOM

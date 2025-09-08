@@ -124,17 +124,17 @@ BEGIN
                     60,60,WS_EX_NOPARENTNOTIFY
     CONTROL         "Physical Memory Usage History",IDC_MEMFRAME,"DavesFrameClass",
                     0x7,78,67,60,60,WS_EX_NOPARENTNOTIFY
-    CONTROL         "Totals",IDC_STATIC13,"DavesFrameClass",0x7,8,129,113,39,
+    CONTROL         "Processing Totals",IDC_STATIC13,"DavesFrameClass",0x7,8,129,113,39,
                     WS_EX_NOPARENTNOTIFY
     CONTROL         "CPU Usage History",IDC_CPUGRAPH,"Button",BS_OWNERDRAW | WS_DISABLED,82,
                     15,6,44,WS_EX_CLIENTEDGE
     CONTROL         "CPU Usage History",IDC_CPUFRAME,"DavesFrameClass",0x7,
                     78,5,8,60,WS_EX_NOPARENTNOTIFY
-    CONTROL         "Physical Memory (K)",IDC_STATIC1,"DavesFrameClass",0x7,
+    CONTROL         "Physical Memory (KB)",IDC_STATIC1,"DavesFrameClass",0x7,
                     130,129,114,39,WS_EX_NOPARENTNOTIFY
-    CONTROL         "Commit Charge (K)",IDC_STATIC5,"DavesFrameClass",0x7,8,
+    CONTROL         "Commit Charge (KB)",IDC_STATIC5,"DavesFrameClass",0x7,8,
                     173,113,39,WS_EX_NOPARENTNOTIFY
-    CONTROL         "Kernel Memory (K)",IDC_STATIC10,"DavesFrameClass",0x7,
+    CONTROL         "Kernel Memory (KB)",IDC_STATIC10,"DavesFrameClass",0x7,
                     130,173,114,39,WS_EX_NOPARENTNOTIFY
 END
 
@@ -460,14 +460,14 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "E&xit Task Manager",          IDM_EXIT
     END
-    POPUP "&Options"
+    POPUP "&Settings (hawk tuah)"
     BEGIN
         MENUITEM "&Always On Top",              IDM_ALWAYSONTOP
         MENUITEM "&Minimize On Use",            IDM_MINIMIZEONUSE, CHECKED
         MENUITEM "&Hide When Minimized",        IDM_HIDEWHENMIN, CHECKED
         MENUITEM "&Shut Down Menu",             IDM_SHOWSHUTDOWN, CHECKED
     END
-    POPUP "&View"
+    POPUP "&Viewz"
     BEGIN
         MENUITEM "&Refresh Now",                IDM_REFRESH
         POPUP "&Update Speed"               
@@ -492,8 +492,8 @@ BEGIN
         MENUITEM "&Cascade",                    IDM_TASK_CASCADE
         MENUITEM "&Bring To Front",             IDM_TASK_BRINGTOFRONT
     END
-    MENUITEM "Sh&ut Down"                       IDM_MENU_SHUTDOWN
-    POPUP "&Help"
+    MENUITEM "&Shut Down (Die)"                       IDM_MENU_SHUTDOWN
+    POPUP "&Help for Whimps"
     BEGIN
         MENUITEM "Task Manager &Help Topics",   IDM_HELP
         MENUITEM SEPARATOR
@@ -564,14 +564,14 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "E&xit Task Manager",          IDM_EXIT
     END
-    POPUP "&Options"
+    POPUP "&Settings (hawk tuah)"
     BEGIN
         MENUITEM "&Always On Top",              IDM_ALWAYSONTOP
         MENUITEM "&Minimize On Use",            IDM_MINIMIZEONUSE, CHECKED
         MENUITEM "&Hide When Minimized",        IDM_HIDEWHENMIN, CHECKED
         MENUITEM "&Shut Down Menu",             IDM_SHOWSHUTDOWN, CHECKED
     END
-    POPUP "&View"
+    POPUP "&Viewz"
     BEGIN
         MENUITEM "&Refresh Now",                IDM_REFRESH
         POPUP "&Update Speed"
@@ -596,8 +596,8 @@ BEGIN
         MENUITEM "Show &LED Numbers",           IDM_LEDNUMBERS
         MENUITEM "&Show Kernel Times",          IDM_KERNELTIMES
     END
-    MENUITEM "Sh&ut Down"                       IDM_MENU_SHUTDOWN
-    POPUP "&Help"
+    MENUITEM "&Shut Down (Die)"                       IDM_MENU_SHUTDOWN
+    POPUP "&Help for Whimps"
     BEGIN
         MENUITEM "Task Manager &Help Topics",   IDM_HELP
         MENUITEM SEPARATOR
@@ -613,14 +613,14 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "E&xit Task Manager",          IDM_EXIT
     END
-    POPUP "&Options"
+    POPUP "&Settings (hawk tuah)"
     BEGIN
         MENUITEM "&Always On Top",              IDM_ALWAYSONTOP
         MENUITEM "&Minimize On Use",            IDM_MINIMIZEONUSE, CHECKED
         MENUITEM "&Hide When Minimized",        IDM_HIDEWHENMIN, CHECKED
         MENUITEM "&Shut Down Menu",             IDM_SHOWSHUTDOWN, CHECKED
     END
-    POPUP "&View"
+    POPUP "&Viewz"
     BEGIN
         MENUITEM "&Refresh Now",                IDM_REFRESH
         POPUP "&Update Speed"
@@ -634,8 +634,8 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "&Select Columns...",          IDM_PROCCOLS
     END
-    MENUITEM "Sh&ut Down"                       IDM_MENU_SHUTDOWN
-    POPUP "&Help"
+    MENUITEM "&Shut Down (Die)"                       IDM_MENU_SHUTDOWN
+    POPUP "&Help for Whimps"
     BEGIN
         MENUITEM "Task Manager &Help Topics",   IDM_HELP
         MENUITEM SEPARATOR
@@ -662,7 +662,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "E&xit Task Manager",          IDM_EXIT
     END
-    POPUP "&Options"
+    POPUP "&Settings (hawk tuah)"
     BEGIN
         MENUITEM "&Always On Top",              IDM_ALWAYSONTOP
         MENUITEM "&Minimize On Use",            IDM_MINIMIZEONUSE, CHECKED
@@ -671,7 +671,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "&Show Full Account Name",     IDM_SHOWDOMAINNAMES
     END
-    POPUP "&View"
+    POPUP "&Viewz"
     BEGIN
         MENUITEM "&Refresh Now",                IDM_REFRESH
         POPUP "&Update Speed"
@@ -685,8 +685,8 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "&Select Columns...",          IDM_USERCOLS
     END
-    MENUITEM "Sh&ut Down"                       IDM_MENU_SHUTDOWN
-    POPUP "&Help"
+    MENUITEM "&Shut Down (Die)"                       IDM_MENU_SHUTDOWN
+    POPUP "&Help for Whimps"
     BEGIN
         MENUITEM "Task Manager &Help Topics",   IDM_HELP
         MENUITEM SEPARATOR
@@ -728,7 +728,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "E&xit Task Manager",          IDM_EXIT
     END
-    POPUP "&Options"
+    POPUP "&Settings (hawk tuah)"
     BEGIN
         MENUITEM "&Always On Top",              IDM_ALWAYSONTOP
         MENUITEM "&Minimize On Use",            IDM_MINIMIZEONUSE,   CHECKED
@@ -742,12 +742,12 @@ BEGIN
         MENUITEM "&Show Scale",                 IDM_SHOWSCALE,       CHECKED
         
     END
-    POPUP "&View"
+    POPUP "&Viewz"
     BEGIN
         MENUITEM "&Refresh Now",                IDM_REFRESH
         POPUP "&Update Speed"                   
         BEGIN
-            MENUITEM "&High"               ,    IDM_HIGH
+            MENUITEM "&High",                   IDM_HIGH
             MENUITEM "&Normal",                 IDM_NORMAL
             MENUITEM "&Low",                    IDM_LOW
             MENUITEM "&Paused",                 IDM_PAUSED
@@ -763,8 +763,8 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "&Select Columns...",          IDM_NETCOL
     END
-    MENUITEM "Sh&ut Down"                       IDM_MENU_SHUTDOWN
-    POPUP "&Help"
+    MENUITEM "&Shut Down (Die)"                       IDM_MENU_SHUTDOWN
+    POPUP "&Help for Whimps"
     BEGIN
         MENUITEM "Task Manager &Help Topics",   IDM_HELP
         MENUITEM SEPARATOR
@@ -958,15 +958,15 @@ END
 
 STRINGTABLE DISCARDABLE 
 BEGIN
-    IDS_PERFPAGETITLE       "Performance"
+    IDS_PERFPAGETITLE       "All Tha Performance"
     IDS_RUNTITLE            "Create New Task"
     IDS_RUNTEXT             "Type the name of a program, folder, document, or Internet resource, and Windows will open it for you."
-    IDS_APPTITLE            "Windows Task Manager"
-    IDS_PROCPAGETITLE       "Processes"
-    IDS_SYSPROC             "System Idle Process"
-    IDS_G                   "G"
-    IDS_M                   "M"
-    IDS_K                   "K"
+    IDS_APPTITLE            "Erik's Task Manager"
+    IDS_PROCPAGETITLE       "Deez Processes"
+    IDS_SYSPROC             "The Almighty System Idle Process"
+    IDS_G                   "GB"
+    IDS_M                   "MB"
+    IDS_K                   "KB"
     IDS_ZERO                "0"
     IDS_NONOPERATIONAL      "Non Operational"
     IDS_UNREACHABLE         "Unreachable"
@@ -996,7 +996,7 @@ BEGIN
     IDS_CANTDEBUG           "Unable to Attach Debugger"
     IDS_CANTCHANGEPRI       "Unable to Change Priority"
     IDS_BADPROC             "The operation is not valid for this process."
-    IDS_TASKPAGETITLE       "Applications"
+    IDS_TASKPAGETITLE       "All Apps"
     IDS_HUNG                "Not Responding"
     IDS_RUNNING             "Running"
     IDS_CANTCREATEDESKTOP   "Unable to Create New Desktop"
@@ -1151,7 +1151,7 @@ END
 
 STRINGTABLE DISCARDABLE 
 BEGIN
-    IDS_USERPAGETITLE       "Users"
+    IDS_USERPAGETITLE       "Users (This means you)"
 END
 
 STRINGTABLE DISCARDABLE 
@@ -1205,11 +1205,11 @@ END
 #include <ntverp.h>
 #define VER_FILETYPE                    VFT_APP
 #define VER_FILESUBTYPE                 VFT_UNKNOWN
-#define VER_COMPANYNAME_STR             "Microsoft Corporation"
-#define VER_PRODUCTNAME_STR             "Microsoft\xAE Windows\xAE Operating System"
-#define VER_FILEDESCRIPTION_STR         "Windows Task Manager"
+#define VER_COMPANYNAME_STR             "Alex313031"
+#define VER_PRODUCTNAME_STR             "Task Manager Ex"
+#define VER_FILEDESCRIPTION_STR         "Windows NT\xAE Task Manager"
 #define VER_INTERNALNAME_STR            "taskmgr"
-#define VER_LEGALCOPYRIGHT_YEARS        "1991-1999"
+#define VER_LEGALCOPYRIGHT_YEARS        "1991-1999 2025"
 #define VER_ORIGINALFILENAME_STR        "taskmgr.exe"
 #include <common.ver>
 

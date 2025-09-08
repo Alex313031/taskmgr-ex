@@ -409,6 +409,7 @@
 #define IDM_ALLCPUS                     40018
 #define IDM_MULTIGRAPH                  40019
 #define IDM_ABOUT                       40021
+#define IDM_SUPERHIGH                   420
 #define IDM_HIGH                        40022
 #define IDM_NORMAL                      40023
 #define IDM_LOW                         40024

@@ -22,9 +22,19 @@
 #define M_INDEX             12  // Index into bitmap strip where "M" lives
 #define BLANK_INDEX         13  // Index into bitmap where blank digit lives
 
+// Color definitions
+#define RGB_RED    RGB(255, 000, 000)
+#define RGB_GREEN  RGB(000, 255, 000)
+#define RGB_BLUE   RGB(000, 000, 255)
+#define RGB_YELLOW RGB(255, 255, 000)
+#define RGB_BLACK  RGB(000, 000, 000)
+#define RGB_WHITE  RGB(255, 255, 255)
+#define RGB_PINK   RGB(255, 020, 147)
+#define RGB_CYAN   RGB(000, 255, 255)
+
 #define GRAPH_BRUSH         BLACK_BRUSH
-#define GRAPH_LINE_COLOR    RGB(0, 128, 64)
-#define GRAPH_TEXT_COLOR    RGB(0, 255, 0)
+#define GRAPH_LINE_COLOR    RGB(0, 0, 64)
+#define GRAPH_TEXT_COLOR    RGB_YELLOW
 
 #define STRIP_HEIGHT        75
 #define STRIP_WIDTH         33
@@ -307,20 +317,20 @@ Revision History:
 
 static const COLORREF aColors[] =
 {
-    RGB(000, 255, 000),
-    RGB(255, 000, 000),
-    RGB(255, 000, 255),
-    RGB(000, 000, 255),
-    RGB(000, 255, 255),
+    RGB_CYAN,           // Color of user mode CPU graph marker line segments
+    RGB_PINK,           // Color of kernel mode CPU graph marker line segments
+    RGB(255, 000, 255), // Purple
+    RGB_RED,
+    RGB(000, 255, 255), // Cyan
     RGB(255, 128, 000),
-    RGB(255, 000, 255),
+    RGB(255, 000, 255), // Purple
     RGB(000, 128, 255),
 
     // End of CPU pens
 
 #define MEM_PEN 8
 
-    RGB(255, 255, 0),
+    RGB(255, 255, 0), // Yellow
 
 };
 
@@ -467,7 +477,7 @@ void CPerfPage::DrawCPUGraph(LPDRAWITEMSTRUCT lpdi, UINT iPane)
     INT  cPanes = (CM_PANES == g_Options.m_cmHistMode) ? g_cProcessors : 1;
     int GraphHeight = ( m_rcGraph.bottom - m_rcGraph.top - 1 ) / ( ( cPanes % 16 != 0 ? 1 : 0 ) + ( cPanes / 16 ) );;
 
-    if (g_Options.m_cmHistMode == CM_PANES)
+    if (CM_PANES == g_Options.m_cmHistMode)
     {
         //
         // Draw the kernel times

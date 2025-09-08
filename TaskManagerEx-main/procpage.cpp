@@ -3307,6 +3307,7 @@ INT_PTR CALLBACK AffinityDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM 
                 SetWindowPos( hwnd, NULL, rc.left, rcCPU0.top + delta, 0, 0, SWP_NOSIZE | SWP_NOZORDER | SWP_NOACTIVATE );
                 
                 GetClientRect( hwndDlg, &rc );
+                
                 AdjustWindowRectEx(
                     &rc,
                     GetWindowLongPtrW(hwndDlg, GWL_STYLE),
